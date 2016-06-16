@@ -9,7 +9,16 @@
 <p>das ist ja so ein wundervolles ergebnis, nach nur vier tagen<br>tutorial.</p>
 <img src="http://petspremium.tv/wp-content/uploads/2015/08/Katze-Fangspielzeug.jpg" width="400px" height="400px">
 </div>
-<div></div>
-<div></div>
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
